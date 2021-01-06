@@ -2,12 +2,18 @@ package com.demo.tour.dto;
 
 import java.util.Currency;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 public class TourPlanningDTO {
 
+    @NotBlank(message = "countryCode is mandatory")
     private String countryCode;
 
+    @NotNull
     private Double perCountryBudget;
 
+    @NotNull
     private Double totalBudget;
 
     private Currency currency;
