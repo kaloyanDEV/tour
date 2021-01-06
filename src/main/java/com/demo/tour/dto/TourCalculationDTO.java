@@ -1,11 +1,12 @@
 package com.demo.tour.dto;
 
+import java.math.BigDecimal;
 import java.util.Set;
 
 public class TourCalculationDTO {
 
     private int tourCount;
-    private double leftover;
+    private BigDecimal leftover;
     private Set<ExpensesDTO> expenses;
 
     public int getTourCount() {
@@ -16,11 +17,11 @@ public class TourCalculationDTO {
         this.tourCount = tourCount;
     }
 
-    public double getLeftover() {
+    public BigDecimal getLeftover() {
         return leftover;
     }
 
-    public void setLeftover(double leftover) {
+    public void setLeftover(BigDecimal leftover) {
         this.leftover = leftover;
     }
 

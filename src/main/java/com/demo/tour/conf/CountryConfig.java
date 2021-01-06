@@ -4,12 +4,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.demo.tour.domain.CountryGraph;
+import com.demo.tour.repository.GeoRepository;
 
 @Configuration
 public class CountryConfig {
 
     @Bean("hardcoded-graph")
-    public CountryGraph getCountryGraph() {
+    public GeoRepository getCountryGraph() {
 
         CountryGraph countryGraph = new CountryGraph();
 

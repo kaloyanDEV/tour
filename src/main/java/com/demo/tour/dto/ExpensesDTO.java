@@ -1,5 +1,6 @@
 package com.demo.tour.dto;
 
+import java.math.BigDecimal;
 import java.util.Currency;
 
 import com.demo.tour.domain.Country;
@@ -8,7 +9,7 @@ public class ExpensesDTO {
 
     private Country country;
 
-    private Double total;
+    private BigDecimal total;
 
     private Currency currency;
 
@@ -20,11 +21,11 @@ public class ExpensesDTO {
         this.country = country;
     }
 
-    public Double getTotal() {
+    public BigDecimal getTotal() {
         return total;
     }
 
-    public void setTotal(Double total) {
+    public void setTotal(BigDecimal total) {
         this.total = total;
     }
 

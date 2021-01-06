@@ -1,5 +1,6 @@
 package com.demo.tour.dto;
 
+import java.math.BigDecimal;
 import java.util.Currency;
 
 import javax.validation.constraints.NotBlank;
@@ -11,10 +12,10 @@ public class TourPlanningDTO {
     private String countryCode;
 
     @NotNull
-    private Double perCountryBudget;
+    private BigDecimal perCountryBudget;
 
     @NotNull
-    private Double totalBudget;
+    private BigDecimal totalBudget;
 
     private Currency currency;
 
@@ -26,19 +27,19 @@ public class TourPlanningDTO {
         this.countryCode = countryCode;
     }
 
-    public Double getPerCountryBudget() {
+    public BigDecimal getPerCountryBudget() {
         return perCountryBudget;
     }
 
-    public void setPerCountryBudget(Double perCountryBudget) {
+    public void setPerCountryBudget(BigDecimal perCountryBudget) {
         this.perCountryBudget = perCountryBudget;
     }
 
-    public Double getTotalBudget() {
+    public BigDecimal getTotalBudget() {
         return totalBudget;
     }
 
-    public void setTotalBudget(Double totalBudget) {
+    public void setTotalBudget(BigDecimal totalBudget) {
         this.totalBudget = totalBudget;
     }
 

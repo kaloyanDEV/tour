@@ -1,9 +1,9 @@
 package com.demo.tour.service;
 
+import java.math.BigDecimal;
 import java.util.Currency;
-import java.util.Locale;
 
 public interface ExchangeService {
 
-    double exhange(Currency from, Locale to, double amount);
+    BigDecimal exhange(Currency from, Currency to, BigDecimal amount);
 }

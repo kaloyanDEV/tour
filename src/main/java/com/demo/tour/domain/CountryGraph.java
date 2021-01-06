@@ -5,13 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CountryGraph {
+import com.demo.tour.repository.GeoRepository;
+
+public class CountryGraph implements GeoRepository {
 
     private Map<Country, List<Country>> adjCountries = new HashMap<>();
-
-    public Map<Country, List<Country>> getAdjCountries() {
-        return adjCountries;
-    }
 
     public void addCountry(String label) {
         adjCountries.putIfAbsent(new Country(label), new ArrayList<>());
@@ -22,6 +20,10 @@ public class CountryGraph {
         Country v2 = new Country(label2);
         adjCountries.get(v1).add(v2);
         adjCountries.get(v2).add(v1);
+    }
+
+    public List<Country> getAdjCountries(Country country) {
+        return adjCountries.get(country);
     }
 
 }
