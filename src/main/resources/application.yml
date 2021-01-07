@@ -1,6 +1,15 @@
 logging:
     level:
-        ROOT: INFO
+        ROOT: DEBUG
         
 server:
     port: 1337
+
+spring:
+    security:
+        oauth2:
+            client:
+                registration:
+                    google:
+                        client-id: 19438371322-3g5np67v74t51cmce69ib9qdvbe9a7c5.apps.googleusercontent.com
+                        client-secret: fVPzAr9lXMh78_tQ9j8ZG-a9
