@@ -48,6 +48,7 @@ public class TourServiceImpl implements TourService {
         if (tourCalculationDTO.getTourCount() > 0) {
             tourCalculationDTO.setLeftover(tourPlanningDTO.getTotalBudget().remainder(tourCost));
         } else {
+            tourCalculationDTO.setLeftover(tourPlanningDTO.getTotalBudget());
             return tourCalculationDTO;
         }
 
